@@ -1,7 +1,6 @@
 <template>
   <q-page > 
 
-    
     <div class="q-pa-md">
     <q-responsive :ratio="1/1" style="width: 95vw; max-width: 100%;">
       <q-carousel 
@@ -32,23 +31,40 @@
     </q-responsive>
   </div>
   
-  <div class="q-pa-md q-gutter-sm">
-    <q-btn
-      padding="lg"
-      color="primary"
-      icon="qr_code_scanner"
-      label="Scan" 
-      no-caps 
-      stack 
-    />
-    <q-btn
-      padding="lg"
-      color="primary"
-      icon="map"
-      label="Map" 
-      no-caps 
-      stack 
-    />
+  <div class="q-pa-md">
+    <div class="row items-start q-gutter-md">
+      <q-responsive :ratio="3/4" class="col">
+        <q-btn
+          color="primary"
+          icon="qr_code_scanner"
+          label="Scan Code"
+          size="lg"
+          no-caps stack no-wrap
+        />
+      </q-responsive>
+
+      <q-responsive :ratio="3/4" class="col">
+        <q-btn
+          color="primary"
+          icon="map"
+          label="VR Map"
+          size="lg"
+          no-caps stack no-wrap
+        />
+      </q-responsive>
+
+      <q-responsive :ratio="3/4" class="col">
+        <q-btn
+          color="primary"
+          icon="3d_rotation"
+          label="AR View" 
+          size="lg"
+          no-caps stack no-wrap
+          href="https://chaujin.github.io/SmartTrolley2/"
+        />
+      </q-responsive>
+
+    </div>
   </div>
 
   </q-page>

@@ -3,8 +3,7 @@
     <q-page-container>
       <router-view />
     </q-page-container>
-    
-
+  
     <q-footer >
       <q-btn-group spread >
         <q-btn icon="home" label="Home" no-caps stack color="white" text-color="black" />
