@@ -38,6 +38,8 @@
 </template>
 
 <script>
+import { openURL } from 'quasar'
+
 export default {
   data () {
     return {
@@ -47,9 +49,11 @@ export default {
       chatTextColor: "grey-10",
       cartColor: "grey-1",
       cartTextColor: "grey-10",
+      leftDrawerOpen: this.$q.platform.is.desktop
     }
   },
   methods: {
+    openURL,
     handleHomeClick () {
       this.homeColor = "primary"
       this.homeTextColor = "white"

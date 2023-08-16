@@ -5,6 +5,7 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/IndexPage.vue') },
+      { path: '/QRCode', component: () => import('pages/QRCode.vue') },
       { path: '/ChatPage', component: () => import('pages/ChatPage.vue') }
     ]
   },

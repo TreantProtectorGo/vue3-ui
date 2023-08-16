@@ -11,7 +11,7 @@
 
 const { configure } = require('quasar/wrappers');
 
-
+// vue.config.js or vue.config.ts
 module.exports = configure(function (/* ctx */) {
   return {
     eslint: {
@@ -94,6 +94,10 @@ module.exports = configure(function (/* ctx */) {
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#framework
     framework: {
       config: {},
+      // runtimeCompiler: true,
+      // compilerOptions: {
+      //   isCustomElement: (tag) => tag === 'qrcode-capture' || tag === 'qrcode-stream',
+      // },
 
       // iconSet: 'material-icons', // Quasar icon set
       // lang: 'en-US', // Quasar language pack
