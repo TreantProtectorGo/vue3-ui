@@ -39,7 +39,7 @@
           icon="qr_code_scanner"
           label="Scan Code"
           size="lg"
-          no-caps stack no-wrap
+          no-caps stack no-wrap 
         />
       </q-responsive>
 
@@ -49,7 +49,7 @@
           icon="map"
           label="VR Map"
           size="lg"
-          no-caps stack no-wrap
+          no-caps stack no-wrap 
         />
       </q-responsive>
 
@@ -57,9 +57,9 @@
         <q-btn
           color="primary"
           icon="3d_rotation"
-          label="AR View" 
+          label="AR View"  
           size="lg"
-          no-caps stack no-wrap
+          no-caps stack no-wrap 
           href="https://chaujin.github.io/SmartTrolley2/"
         />
       </q-responsive>
