@@ -1,11 +1,11 @@
 <template>
-  <q-layout view="hHh lpR fFf" >
+  <q-layout view="hHh lpR fFf hide-scrollbar" >
     <q-page-container>
       <router-view />
     </q-page-container>
 
     <q-footer>
-      <q-btn-group spread>
+      <q-btn-group spread >
         <q-btn 
           to="/" 
           icon="home" 
@@ -25,6 +25,7 @@
           @click="handleChatClick"
         />
         <q-btn 
+          to="/ShoppingCart"
           icon="shopping_cart" 
           label="Cart" 
           no-caps stack 

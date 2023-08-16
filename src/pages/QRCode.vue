@@ -10,8 +10,7 @@
     <p class="decode-result">
       <b>{{ result }}</b>
     </p>
-    <qrcode-stream class="qr" @detect="onDetect" @error="onError">
-      </qrcode-stream>
+    <qrcode-stream class="qr" @detect="onDetect" @error="onError"></qrcode-stream>
     <qrcode-capture @detect="onDetect" ></qrcode-capture>
     
 
