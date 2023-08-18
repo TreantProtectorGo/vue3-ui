@@ -1,13 +1,13 @@
 <template>
-  <div class="q-pa-md row justify-center">
-      <div style="width: 100%; max-width: 400px">
+  <div class="q-pa-xl row justify-center">
+      <div style="width: 100%;">
       <q-chat-message
-          name="me"
+          name="Me"
           :text="['hey, how are you?']"
           sent
       />
       <q-chat-message
-          name="Jane"
+          name="ChatGPT"
           :text="['doing fine, how r you?']"
       />
       </div>

@@ -1,11 +1,17 @@
+<style>
+
+</style>
+
 <template>
-  <q-layout view="hHh lpR fFf hide-scrollbar" >
-    <q-page-container>
-      <router-view />
+  <q-layout view="hHh lpR fFf" >
+    
+    <q-page-container >
+      <router-view  />
     </q-page-container>
 
-    <q-footer>
-      <q-btn-group spread >
+    <q-footer >
+      <q-btn-group spread>
+        
         <q-btn 
           to="/" 
           icon="home" 
@@ -36,6 +42,7 @@
       </q-btn-group>
     </q-footer>
   </q-layout>
+
 </template>
 
 <script>
