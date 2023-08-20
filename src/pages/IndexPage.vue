@@ -1,17 +1,14 @@
 <style>
-  .q-page{
-    display: flex;
-    flex-direction: column;
+  .box {
+    border: 1px solid #ccc;
   }
-  .buttom-group {
-    flex: 1;
-  }
+
 </style>
 <template>
   <q-page > 
     <div class="q-pa-md">
       <div>
-        <div v-if="$q.screen.width > 767">
+        <div v-if="$q.screen.width > 768" class="bg-grey-1 shadow-2 rounded-borders">
           <q-carousel
               animated
               v-model="slide"
@@ -20,7 +17,45 @@
               swipeable
               :autoplay="autoplay"
               arrows
-              class="bg-grey-1 shadow-2 rounded-borders"
+
+              transition-prev="slide-right"
+              transition-next="slide-left"
+              @mouseenter="autoplay = false"
+              @mouseleave="autoplay = true"
+          >
+            <q-carousel-slide :name="1" class="column no-wrap">
+              <div class="row  justify-start items-center q-gutter-xs q-col-gutter no-wrap">
+                <q-img class="rounded-borders col-6 full-height" src="~assets/4.jpg" />
+                <q-img class="rounded-borders col-6 full-height" src="~assets/5.jpg" />
+              </div>
+            </q-carousel-slide>
+            <q-carousel-slide :name="2" class="column no-wrap">
+              <div class="row  justify-start items-center q-gutter-xs q-col-gutter no-wrap">
+                <q-img class="rounded-borders col-6 full-height" src="~assets/d1.jpg" />
+                <q-img class="rounded-borders col-6 full-height" src="~assets/d2.jpg" />
+              </div>
+            </q-carousel-slide>
+            <q-carousel-slide :name="3" class="column no-wrap">
+              <div class="row  justify-start items-center q-gutter-xs q-col-gutter no-wrap">
+                <q-img class="rounded-borders col-6 full-height" src="~assets/d3.jpg" />
+                <q-img class="rounded-borders col-6 full-height" src="~assets/d4.jpg" />
+              </div>
+            </q-carousel-slide>
+            <q-carousel-slide :name="4" class="column no-wrap">
+              <div class="row  justify-start items-center q-gutter-xs q-col-gutter no-wrap">
+                <q-img class="rounded-borders col-6 full-height" src="~assets/d5.jpg" />
+                <q-img class="rounded-borders col-6 full-height" src="~assets/d6.jpg" />
+              </div>
+            </q-carousel-slide>
+          </q-carousel>
+          <q-carousel
+              animated
+              v-model="slide"
+              navigation
+              infinite
+              swipeable
+              :autoplay="autoplay"
+              arrows
 
               transition-prev="slide-right"
               transition-next="slide-left"
@@ -54,7 +89,7 @@
           </q-carousel>
         </div>
         <div v-else >
-          <q-responsive :ratio="1/1"  
+          <q-responsive :ratio="1/1"   
             style="justify-content: center;"
           >
             <q-carousel 
@@ -87,42 +122,78 @@
       </div>
       
     </div>
-  
-    <div class="q-pa-md buttom-group">
-      <div class="row items-start q-gutter-sm">
-        <q-responsive :ratio="2/3" class="col">
+    <div v-if="$q.screen.width > 768">
+      <div class="q-pa-sm">
+        <div class="row items-start q-gutter-sm" style="justify-content: center;">
           <q-btn
-            to="/QRCode"
-            color="primary"
-            icon="qr_code_scanner"
-            label="Scan Code"
-            size="lg"
-            no-caps stack no-wrap 
-            @click="handleClick"
-          />
-        </q-responsive>
-
-        <q-responsive :ratio="2/3" class="col">
+              class="one col-3"
+              to="/QRCode"
+              color="primary"
+              icon="qr_code_scanner"
+              size="35px"
+              label="Scan Code"
+              no-caps stack no-wrap 
+              @click="handleClick"
+              style="min-height: 250px; min-width: 255px; "
+            />
           <q-btn
-            color="primary"
-            icon="map"
-            label="VR Map"
-            size="lg"
-            no-caps stack no-wrap 
-          />
-        </q-responsive>
-
-        <q-responsive :ratio="2/3" class="col">
+              class="two col-3"
+              color="primary"
+              icon="map"
+              size="35px"
+              label="VR Map"
+              no-caps stack no-wrap 
+              style="min-height: 250px; min-width: 255px;"
+            />
           <q-btn
-            color="primary"
-            icon="3d_rotation"
-            label="AR View"  
-            size="lg"
-            no-caps stack no-wrap 
-            href="https://chaujin.github.io/SmartTrolley2/"
-          />
-        </q-responsive>
-
+              class="three col-3"
+              color="primary"
+              icon="3d_rotation"
+              label="AR View"  
+              size="35px"
+              no-caps stack no-wrap 
+              href="https://chaujin.github.io/SmartTrolley2/"
+              style="min-height: 250px; min-width: 255px;" 
+            />
+        </div>
+          
+      </div>
+    </div>
+    
+    <div v-else >
+      <div class="q-pt-sm">
+        <div class="row items-start q-gutter-xs" style="justify-content: center;" >
+          <q-btn
+              class="one col-3"
+              to="/QRCode"
+              color="primary"
+              icon="qr_code_scanner"
+              size="lg"
+              label="Scan Code"
+              no-caps stack no-wrap 
+              @click="handleClick"
+              style="min-height: 200px; min-width: 110px;"
+            />
+          <q-btn
+              class="two col-3"
+              color="primary"
+              icon="map"
+              size="lg"
+              label="VR Map"
+              no-caps stack no-wrap 
+              style="min-height: 200px; min-width: 110px;"
+            />
+          <q-btn
+              class="three col-3"
+              color="primary"
+              icon="3d_rotation"
+              label="AR View"  
+              size="lg"
+              no-caps stack no-wrap 
+              href="https://chaujin.github.io/SmartTrolley2/"
+              style="min-height: 200px; min-width: 110px;" 
+            />
+        </div>
       </div>
     </div>
 

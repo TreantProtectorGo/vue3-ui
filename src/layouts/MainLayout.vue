@@ -1,5 +1,5 @@
 <style>
-
+  
 </style>
 
 <template>
@@ -9,8 +9,11 @@
       <router-view  />
     </q-page-container>
 
-    <q-footer >
-      <q-btn-group spread>
+    <q-footer>
+      <q-btn-group 
+        spread square
+        :style="{ height: $q.screen.width > 768 ? '70px' : '' }"
+      > 
         
         <q-btn 
           to="/" 
@@ -51,40 +54,39 @@ import { openURL } from 'quasar'
 export default {
   data () {
     return {
-      homeColor: "grey-1",
-      homeTextColor: "grey-10",
-      chatColor: "grey-1",
+      homeColor: "grey-2",
+      homeTextColor: "primary",
+      chatColor: "grey-2",
       chatTextColor: "grey-10",
-      cartColor: "grey-1",
+      cartColor: "grey-2",
       cartTextColor: "grey-10",
-      leftDrawerOpen: this.$q.platform.is.desktop
     }
   },
   methods: {
     openURL,
     handleHomeClick () {
-      this.homeColor = "primary"
-      this.homeTextColor = "white"
-      this.chatColor = "grey-1"
+      this.homeColor = "grey-2"
+      this.homeTextColor = "primary"
+      this.chatColor = "grey-2"
       this.chatTextColor = "grey-10"
-      this.cartColor = "grey-1"
+      this.cartColor = "grey-2"
       this.cartTextColor = "grey-10"
     },
     handleChatClick () {
-      this.homeColor = "grey-1"
+      this.homeColor = "grey-2"
       this.homeTextColor = "grey-10"
-      this.chatColor = "primary"
-      this.chatTextColor = "white"
-      this.cartColor = "grey-1"
+      this.chatColor = "grey-2"
+      this.chatTextColor = "primary"
+      this.cartColor = "grey-2"
       this.cartTextColor = "grey-10"
     },
     handleCartClick () {
-      this.homeColor = "grey-1"
+      this.homeColor = "grey-2"
       this.homeTextColor = "grey-10"
-      this.chatColor = "grey-1"
+      this.chatColor = "grey-2"
       this.chatTextColor = "grey-10"
-      this.cartColor = "primary"
-      this.cartTextColor = "white"
+      this.cartColor = "grey-2"
+      this.cartTextColor = "primary"
     }
   }
 }

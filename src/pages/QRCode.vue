@@ -2,6 +2,13 @@
 
 </script>
 
+<style scoped>
+.error {
+  color: red;
+  font-weight: bold;
+}
+</style>
+
 <template>
   
    <div class="q-pa-md row justify-center">
@@ -69,10 +76,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.error {
-  color: red;
-  font-weight: bold;
-}
-</style>
