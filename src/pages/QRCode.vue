@@ -10,14 +10,13 @@
 </style>
 
 <template>
-  
-   <div class="q-pa-md row justify-center">
+   <div class="q-pa-xl row justify-center">
     <p class="error">{{ error }}</p>
 
     <p class="decode-result">
       <b>{{ result }}</b>
     </p>
-    <qrcode-stream class="qr" @detect="onDetect" @error="onError"></qrcode-stream>
+    <qrcode-stream @detect="onDetect" @error="onError"></qrcode-stream>
     <qrcode-capture @detect="onDetect" ></qrcode-capture>
     
 
@@ -26,13 +25,13 @@
 
 <script>
 import { ref } from 'vue'
-import { QrcodeStream, QrcodeCapture } from 'vue-qrcode-reader'
+import { QrcodeStream, QrcodeCapture} from 'vue-qrcode-reader'
 
 export default {
   name: 'App',
   components: {
     QrcodeStream,
-    QrcodeCapture
+    QrcodeCapture,
   },
 
   // data
@@ -49,6 +48,7 @@ export default {
 
       const [firstCode] = detectedCodes
       this.result = firstCode.rawValue
+
       //window.location.href = this.result;
     },
 

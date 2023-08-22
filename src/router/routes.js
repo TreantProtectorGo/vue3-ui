@@ -7,7 +7,8 @@ const routes = [
       { path: '', component: () => import('pages/IndexPage.vue') },
       { path: '/QRCode', component: () => import('pages/QRCode.vue') },
       { path: '/ChatPage', component: () => import('pages/ChatPage.vue') },
-      { path: '/ShoppingCart', component: () => import('pages/ShoppingCart.vue') }
+      { path: '/ShoppingCart', component: () => import('pages/ShoppingCart.vue') },
+      { path: '/BarcodeScanner', component: () => import('pages/BarcodeScanner.vue') }
     ]
   },
 
