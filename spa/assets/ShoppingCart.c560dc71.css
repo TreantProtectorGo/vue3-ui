@@ -1,0 +1,1 @@
+.cart{display:flex}p{display:block;margin:auto 2px;flex:auto;word-wrap:break-word;width:50px}#A{display:grid;height:110px;grid-template-areas:"B C D" "B C D" "B C D"}#B{grid-area:B}#C{grid-area:C}#D{grid-area:D}
